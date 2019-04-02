@@ -1,0 +1,130 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[11pt, a4paper]{moderncv}
+\usepackage[noindent, UTF8]{ctex}
+\usepackage{fontspec}
+% moderncv themes. optional argument are 'blue' (default), 'orange', 'red', 
+% 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[blue]{classic}
+\usepackage{xunicode, xltxtra}
+\XeTeXlinebreaklocale "zh"
+\widowpenalty=10000
+
+% character encoding
+\usepackage[utf8]{inputenc} % replace by the encoding you are using
+
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\recomputelengths  % required when changes are made to page layout lengths
+
+% 个人信息
+\firstname{付}
+\familyname{康为}
+\title{个人简历}
+\address{江苏省南通市崇川区啬园路9号}{226019 南通}
+\mobile{+86~19895945153}
+\email{fukangwei\_lite@163.com}
+\homepage{https://fukangwei.github.io}                 
+\extrainfo{求职意向：图像处理工程师，深度学习工程师}
+\photo[82pt]{fukangwei.jpg}
+
+\begin{document}
+	\maketitle
+	
+	\section{教育背景}
+	\cventry{2012.9 -- 2016.6}{工学学士}{南通大学电子信息学院}{集成电路与集成系统}{}{}
+	\cventry{2016.9 -- 至今}{工学硕士}{南通大学电子信息学院}{信息与通信工程}{第一学位}{}
+	\cventry{2018.4 -- 至今}{工学修士}{日本德岛大学}{知能情报专业}{第二学位}{}
+
+	\section{社区}
+	\cventry{笔记+博客}{\url{https://fukangwei.github.io}}{}{}{}{}
+	\cventry{GitHub}{\url{http://github.com/fukangwei}}{}{}{}{}
+	
+	\section{项目经历}
+	\cventry{2018.9 -- 2019.1}
+	{基于MobileNet v2和U-Net的自然场景文字检测系统}
+	{}{}{}{
+		\begin{itemize}
+			\item 项目简介：针对自然场景图片进行语义分割，以识别文字像素区域与非文字像素区域。
+			\item 主要职责：对数据集进行数据增强，设计出MobileNet v2 + U-Net神经网络模型。
+			\item 主要技术：MobileNet v2，U-Net，数据增强，OpenCV，图像语义分割。
+			\item 项目结果：极大地减小了神经网络模型的复杂度，识别率良好。
+		\end{itemize}}{}	  
+
+	\cventry{2018.4 -- 2018.8}
+	{基于SSD神经网络的危险物品识别系统}
+	{}{}{}{
+		\begin{itemize}
+			\item 项目简介：基于SSD目标检测与ResNet神经网络模型，识别刀具等危险物品。
+			\item 主要职责：修改SSD目标检测的神经网络模型，将VGG替换为ResNet。
+			\item 主要技术：SSD目标检测模型，迁移学习，ResNet网络，Keras深度学习框架
+			\item 项目结果：可以检测出图片中的危险物品，并且检测的正确率高于原始的SSD模型。
+	\end{itemize}}{}
+
+	\cventry{2017.6 -- 2017.9}
+	{基于深度学习的人脸表情识别系统}
+	{}{}{}{
+		\begin{itemize}
+			\item 项目简介：使用Pytorch搭建神经网络模型，对人脸的表情进行分类。
+			\item 主要职责：对原始数据集进行数据增强，以防止过拟合；搭建卷积神经网络模型。
+			\item 主要技术：Pytorch深度学习框架，卷积神经网络，数据增强，混淆矩阵
+			\item 项目结果：使用Fer2013数据集进行训练，分类准确率可以达到65\%。
+	\end{itemize}}{}
+
+	\cventry{2016.1 -- 2016.9}
+	{基于IPv6的现代农业物联网技术及应用}
+	{}{}{}{
+		\begin{itemize}
+			\item 项目简介：搭建基于6LowPAN的无线传感器网络，使用IPv6协议传输传感器数据。
+			\item 主要职责：6LowPAN协议栈移植，应用层软件编写，使用QT实现UI界面。
+			\item 主要技术：6LowPAN无线传感网络协议栈，QT，Contiki嵌入式操作系统
+			\item 项目结果：实现了6LowPAN无线传感器网络，传感器通过IPv6协议传输数据。
+	\end{itemize}}{}
+
+	\cventry{2015.3 -- 2015.8}
+	{基于北斗的巡航船系统设计}
+	{}{}{}{
+		\begin{itemize}
+			\item 项目简介：基于北斗定位，使巡航船实现自主循迹，并向服务器发送位置信息。
+			\item 主要职责：编写嵌入式软件，编写北斗模块以及GPRS模块的设备驱动。
+			\item 主要技术：STM32，北斗模块，GPRS模块，PID算法，卡尔曼滤波算法
+			\item 项目结果：可以实现巡航船的循迹，以及实时跟踪船的位置。
+	\end{itemize}}{}
+
+	\section{语言技能}
+	\cvline{汉语}{母语。}
+	\cvline{英语}{\textbf{CET-6}，经常阅读英文论文，在国外可以用英语和老师交流。}
+	\cvline{日语}{在日本留学一年，可以进行日常交流。}
+
+	\section{专业技能}
+	\cvline{编程语言}{Python > C++ > C > Java > Node.js > HTML > Shell}
+	\cvline{工具}{Markdown，LaTeX，Github，Hexo，Office}
+	\cvline{操作系统}{GNU/Linux(Ubuntu, CentOS)，Windows}
+	\cvline{深度学习框架}{Pytorch > Keras > TensorFlow}
+	\cvline{机器学习框架}{SKLearn}
+	\cvline{视觉处理工具库}{OpenCV}
+	\cvline{神经网络模型}{CNN，FCN，FPN，U-Net，MobileNet，MobileNet V2，VGG，ResNet}
+	\cvline{嵌入式系统}{80C51，STM32，S3C2440，CC2530}
+	\cvline{数据库}{SQLite}
+	\cvline{应用程序框架}{QT，Android}
+
+	\section{获得奖励}
+	\cventry{2015.5}
+	{2015年江苏省大学生计算机设计大赛软件服务外包类本科组优胜奖}{}{}{}{}
+	\cventry{2015.6}
+	{第十四届“挑战杯”江苏省大学生课外学术科技作品竞赛三等奖}{}{}{}{}
+	\cventry{2015.8}
+	{全国大学生物联网设计竞赛华东赛区二等奖}{}{}{}{}
+	\cventry{2016.5}
+	{“中国动力谷杯”第十一届全国大学生交通科技大赛二等奖}{}{}{}{}
+	\cventry{2016.7}
+	{华为杯”第十一届中国研究生电子设计大赛华东分赛区团队二等奖}{}{}{}{}
+	\cventry{2017.7}
+	{“华为杯”第十二届中国研究生电子设计大赛华东分赛区团队三等奖 }{}{}{}{}
+
+	\section{个人兴趣}
+	\cvline{爱好}{钻研技术，整理笔记，写博客，修改BUG}
+	\cvline{互联网}{\href{http://github.com/fukangwei}{GitHub}}
+	\cvline{其他}{摄影，看书}
+\end{document}
